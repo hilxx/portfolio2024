@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="include_wrap" data-include-path="common/header.html"></div>
+        <php include="header.html"></php>
+    </header>
+    <div id="container">
+        <div class="main">
+            <!-- 자기 소개 -->
+            test
+        </div>
+    </div>
+
+    <footer>
+
+    </footer>
+
+    <script>
+        function includehtml() {
+            var allElements = $(".include_wrap");
+            Array.prototype.forEach.call(allElements, function (el) {
+                var includePath = el.dataset.includePath;
+                console.log(includePath);
+                if (includePath) {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                    el.outerHTML = this.responseText;
+                    }
+                };
+                xhttp.open('GET', includePath, false);
+                xhttp.send();
+                }
+            });
+        };
+
+        $(document).ready(function () {
+            includehtml(); 
+                
+            // etc... 
+            $(".btn_link").click(function(){
+                alert("clicked!");
+            })
+        });
+    </script>
+</body>
+</html>
