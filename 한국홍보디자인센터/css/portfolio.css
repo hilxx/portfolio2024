@@ -29,6 +29,7 @@
 #container .main .web_wrap .web_box .web_cont-wrap .web_cont {
   width: 24%;
   overflow: hidden;
+  margin-bottom: 50px;
 }
 #container .main .web_wrap .web_box .web_cont-wrap .web_cont a {
   display: block;
@@ -43,7 +44,7 @@
   position: relative;
 }
 #container .main .web_wrap .web_box .web_cont-wrap .web_cont .web_thumb:hover .black_hover {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.2);
 }
 #container .main .web_wrap .web_box .web_cont-wrap .web_cont .web_thumb:hover .com_logo img.logo-color {
   opacity: 1;
@@ -58,7 +59,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.5);
   transition: all 0.3s ease;
 }
 #container .main .web_wrap .web_box .web_cont-wrap .web_cont .web_thumb .com_img {
@@ -94,23 +95,19 @@
   font-weight: 700;
   color: #000;
 }
-#container .main .web_wrap .web_box .web_cont-wrap .web_cont .web_dscBox h4 {
-  font-size: 15px;
-  font-weight: 500;
-  color: #666;
-  margin: 5px 0 10px;
-}
 #container .main .web_wrap .web_box .web_cont-wrap .web_cont .web_dscBox .dsc_detail h5 {
-  font-size: 18px;
+  font-size: 16px;
   color: #222;
-}
-#container .main .web_wrap .web_box .web_cont-wrap .web_cont .web_dscBox .dsc_detail ul {
-  margin-top: 5px;
+  margin: 5px 0 15px;
 }
 #container .main .web_wrap .web_box .web_cont-wrap .web_cont .web_dscBox .dsc_detail ul li {
   font-size: 16px;
   line-height: 1.5;
   padding-right: 10px;
+}
+#container .main .web_wrap .web_box .web_cont-wrap .web_cont .web_dscBox .dsc_detail ul li span {
+  font-size: 13px;
+  color: #444;
 }
 
 @media screen and (max-width: 1280px) {
