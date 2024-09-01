@@ -40,12 +40,13 @@ address,i,em{
 }
 
 //변수 선언
+$hilxx_color-bg:#0f2142;
 $hilxx_color-b:#92a8d1;
 $hilxx_color-p:#d798d8; //#d58e8c;
 
 //common
 #container{
-    background:#0f2142;
+    background: $hilxx_color-bg;
     color:white;
 }
 .sect-wrap{
@@ -140,38 +141,74 @@ footer{
         .foot_top{
             display:flex;
             justify-content:space-between;
-            align-items:baseline;
+            align-items:start;
 
             .foot_left{
-                ul{
-                    li{
-                        margin-bottom:10px;
+                .foot_link{
+                    margin-bottom:30px;
 
-                        &:last-child{
-                            margin-bottom:0;
+                    ul{
+                        display: flex;
+                        gap:25px;
+
+                        li{
+                            width:50px;
+                            height:50px;
+                            background:white;
+                            border-radius:50%;
+
+                            img{
+                                width:100%;
+                                text-align:center;
+                                display:flex;
+                                justify-content:center;
+                                align-items:center;
+                            }
                         }
+                    }
+                }
 
-                        a{
-                            color:white;
+                .foot_address{
+                    ul{
+                        li{
+                            margin-bottom:10px;
 
-                            span{
-                                font-weight:600;
-                                color:#e2e8f2;
-                                display:inline-block;
-                                width:100px;
+                            &:last-child{
+                                margin-bottom:0;
+                            }
+
+                            a{
+                                color:white;
+
+                                span{
+                                    font-weight:600;
+                                    color:#e2e8f2;
+                                    display:inline-block;
+                                    width:100px;
+                                }
                             }
                         }
                     }
                 }
             }
-        }
 
-        .foot_bottom{
-            margin-top:30px;
+            .foot_right{
+                .foot_logo{
+                    text-align:end;
 
-            .copyright{
-                color:#a7a5a5;
-                font-size:13px;
+                    a{
+                        font-family:"Pacifico", serif;
+                        font-size:55px;
+                        background: linear-gradient(90deg, rgba(255,255,255,1) 31%, rgba(177,176,176,1) 84%);
+                        color: transparent;
+                        -webkit-background-clip: text;
+                    }
+                }
+
+                .copyright{
+                    color:#a7a5a5;
+                    font-size:13px;
+                }
             }
         }
     }

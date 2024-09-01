@@ -63,7 +63,7 @@
   opacity: 1;
 }
 #container .introduce_wrap .intro_content-box .intro_left .my_photo .photo:hover img.my_img {
-  opacity: 0;
+  opacity: 1;
 }
 #container .introduce_wrap .intro_content-box .intro_right {
   flex: 1;
