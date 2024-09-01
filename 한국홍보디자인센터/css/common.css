@@ -38,6 +38,21 @@ address, i, em {
   font-style: normal;
 }
 
+.sect-wrap {
+  max-width: 1420px;
+  padding: 0 30px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.big_title {
+  font-family: "DM Serif Text";
+  font-size: 120px;
+  color: #efefef;
+  font-style: italic;
+  margin: 70px 0 80px;
+}
+
 header {
   width: 100%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);

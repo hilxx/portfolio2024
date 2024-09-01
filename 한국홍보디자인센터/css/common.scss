@@ -43,6 +43,22 @@ address,i,em{
 $hilxx_color-b:#92a8d1;
 $hilxx_color-p:#d58e8c;
 
+//common
+.sect-wrap{
+    max-width:1420px;
+    padding:0 30px;
+    margin:0 auto;
+    width:100%;
+}
+
+.big_title{
+    font-family:"DM Serif Text";
+    font-size:120px;
+    color:#efefef;
+    font-style:italic;
+    margin:70px 0 80px;
+}
+
 
 
 //header
