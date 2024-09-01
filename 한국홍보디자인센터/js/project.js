@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    // sect1
+    // project
     var lastHoveredIndex = -1;
 
     $('.pj_btn').hover(

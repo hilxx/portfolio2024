@@ -1,3 +1,8 @@
+//변수 선언
+$hilxx_color-bg:#0f2142;
+$hilxx_color-b:#92a8d1;
+$hilxx_color-p:#d798d8; //#d58e8c;
+
 #container{
     // background:#0a152b;
 
@@ -156,6 +161,150 @@
         }
 
         //design_web
+        .design_wrap{
+            .design_cont-wrap{
+                margin-top:20px;
+                display:flex;
+                justify-content:start;
+                flex-wrap:wrap;
+                gap:1%;
+                
+                .design_cont{
+                    width:49%;
+                    overflow:hidden;
+                    margin-bottom:50px;
+
+                    a{
+                        display:block;
+                        width:100%;
+                        /*height:100%;*/
+                    }
+                    
+                    .design_thumb{
+                        width:100%;
+                        height:420px;
+                        overflow:hidden;
+                        border-radius:15px;
+                        position:relative;
+
+                        &:hover{
+                            .black_hover{
+                                background:rgba(0,0,0,0.2);
+                            }
+
+                            .com_logo{
+                                img{
+                                    &.logo-color{
+                                        opacity:1;
+                                        z-index:1;
+                                    }
+
+                                    &.logo-white{
+                                        opacity:0;
+                                    }
+                                }
+                            }
+
+                            .com_img{
+                                transform:scale(1.2);
+                            }
+                        }
+
+                        .black_hover{
+                            position:absolute;
+                            top:0;
+                            left:0;
+                            width:100%;
+                            height:100%;
+                            background:rgba(0,0,0,0.5);
+                            transition:all 0.3s ease;
+                        }
+                        
+                        .com_img{
+                            width:100%;
+                            height:100%;
+                            object-fit:cover;
+                            transition:all 0.3s ease;
+                        }
+
+                        .com_logo{
+
+                            img{
+                                transition:all 0.3s ease;
+                                
+                                &.logo-color{
+                                    position:absolute;
+                                    top:50%;
+                                    left:50%;
+                                    transform:translate(-50%,-50%);
+                                    opacity:0;
+                                }
+
+                                &.logo-white{
+                                    position:absolute;
+                                    top:50%;
+                                    left:50%;
+                                    transform:translate(-50%,-50%);
+                                    opacity:1;
+                                }
+                            }
+                        }
+                    }
+
+                    .design_dscBox{
+                        margin-top:25px;
+                        border-top:1px solid #ccc;
+                        border-bottom:1px solid #ccc;
+                        padding:15px 0 20px;
+
+                        h3{
+                            font-size:24px;
+                            font-weight:700;
+                            //color:#000;
+                            color:white;
+                        }
+
+                        .dsc_detail{
+                            h5{
+                                font-size:16px;
+                                font-weight:550;
+                                //color:#222;
+                                color:white;
+                                margin:5px 0 15px;
+                            }
+
+                            ul{
+                                li{
+                                    font-size:16px;
+                                    line-height:1.5;
+                                    padding-right:10px;
+                                    color:#efefef;
+
+                                    span{
+                                        font-size:13px;
+                                        //color:#444;
+                                        color:#ccc;
+                                    }
+
+                                    &.link{
+                                        a{
+                                            color:#ccc;
+                                            font-size:14px;
+                                            transition:all 0.3s ease;
+                                            margin-top:5px;
+
+                                            &:hover{
+                                                color:white;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
         //project_web
         .pj_cont-wrap{
@@ -164,8 +313,8 @@
 
             .pj_cont-btnBox{
                 position:absolute;
-                top:100px;
-                right:345px;
+                top:50px;
+                right:275px;
                 z-index:999;
 
                 ul{
@@ -181,21 +330,24 @@
                         opacity:1;
                         font-size:22px;
                         font-weight:500;
-                        color:#999;
 
                         &::before{
-                            content:'';
+                            content:"";
                             display:block;
                             width:52px;
                             height:52px;
                             border-radius:50%;
                             position:absolute;
                             top:50%;
-                            left:-29px;
+                            left:-18px;
                             transform:translateY(-50%) scale(0);
                             z-index:-1;
                             transition:all 0.3s linear;
                             background:$hilxx_color-b;
+                        }
+
+                        &:nth-child(2)::before{
+                            left:-28px;
                         }
 
                         &.on{
@@ -213,11 +365,12 @@
 
                         a{
                             pointer-events:none;
+                            color:#b1b1b1;
                         }
                     }
                 }
             }
-
+            
             .pj_cont-infoBox{
                 display:flex;
                 justify-content:space-between;
@@ -239,32 +392,156 @@
                     .pj_cont-txtBox{
                         background:$hilxx_color-bg; 
                         width:100%; 
-                        padding:0 0 120px 85px;
+                        padding:100px 0 80px 85px;
 
                         h2{
                             color:#fff; 
-                            font-size:90px; 
+                            font-size:45px; 
                             font-weight:700;
                         }
 
                         .subTxt{
                             font-size:26px; 
                             font-weight:500; 
-                            color:#fff; 
-                            margin:0px 0 37px;
+                            color:$hilxx_color-b;
 
                             .subName{
                                 font-size:18px;
-                                color:#ddd;
+                                color:$hilxx_color-b;
+                                display:block;
                             }
                         }
 
+                        .date{
+                            font-size:15px;
+                            color:#efefef;
+                            margin:10px 0 35px;
+                        }
+
                         .dsc {
-                            font-size:18px; 
-                            line-height:1.5; 
-                            font-weight:500; 
-                            color:#999; 
-                            margin-bottom:90px;
+                            p{
+                                font-size:20px; 
+                                line-height:1.5; 
+                                font-weight:500; 
+                                color:#fff; 
+                            }
+
+                            ul{
+                                margin-top:10px;
+
+                                li{
+                                    font-size:15px;
+                                    line-height:1.3;
+                                    color:white;
+                                    font-weight:400;
+                                    margin-bottom:5px;
+                                }
+                            }
+                        }
+
+                        .pj_link{
+                            margin-top:30px;
+                            display:flex;
+                            gap:25px;
+
+                            .viewMore_btn{
+                                font-size:12px; 
+                                font-weight:500; 
+                                width:120px; 
+                                text-align:start; 
+                                transition:all 0.3s;
+
+                                
+                                    
+                                &:hover {
+                                    width:150px;
+
+                                    .btn-arrow::before{
+                                        background-color:#fff; 
+                                        z-index:55;
+                                        width:30px;
+                                        right:10px;
+                                    }
+
+                                    .btn-arrow::after{
+                                        width:50px; 
+                                        border-radius:15px;
+                                    }
+
+                                    .btn_arrow_icon::before{
+                                        background-color:#fff;
+                                    }
+                                }
+
+                                .btn-arrow{
+                                    position:relative; 
+                                    display:block; 
+                                    width:100%; 
+                                    color:$hilxx_color-b;
+
+                                    &::before,
+                                    &::after{
+                                        content:""; 
+                                        position:absolute; 
+                                        top:50%; 
+                                        transform:translateY(-50%);
+                                    }
+
+                                    &::before{
+                                        right:26px; 
+                                        width:20px; 
+                                        height:2px; 
+                                        background-color:transparent; transition:background-color .3s;
+                                    }
+
+                                    &::after{
+                                        right:0; 
+                                        width:26px; 
+                                        height:26px; 
+                                        border-radius:50%; 
+                                        background-color:$hilxx_color-b;
+                                        transition:width .3s, border-radius .3s;
+                                    }
+
+                                    .btn_arrow_icon{
+                                        display:inline-block; 
+                                        position:absolute; 
+                                        top:50%; 
+                                        right:0; 
+                                        width:26px; 
+                                        height:26px; 
+                                        transform:translateY(-50%);
+                                        z-index:55;
+
+                                        &::before,
+                                        &::after{
+                                            content:""; 
+                                            display:inline-block; 
+                                            position:absolute; 
+                                            top:50%; 
+                                            transform:translateY(-50%);
+                                        }
+
+                                        &::before{
+                                            left:0; 
+                                            width:60%; 
+                                            height:2px; 
+                                            background-color:transparent; 
+                                            transition:all 0.3s;
+                                        }
+
+                                        &::after{
+                                            left:50%; 
+                                            width:8px; 
+                                            height:8px; 
+                                            margin:-1px 0 0 -3px; 
+                                            border-right:2px solid #fff;
+                                            border-bottom:2px solid #fff;
+                                            transform:rotate(-45deg) translateY(-50%);
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -278,5 +555,9 @@
 @media screen and (max-width:1280px){
     .sect-wrap{
         max-width:1080px; padding:0 10px;
+    }
+
+    .pj_cont-btnBox{
+        right:200px;
     }
 }
