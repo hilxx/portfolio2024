@@ -38,6 +38,11 @@ address, i, em {
   font-style: normal;
 }
 
+#container {
+  background: #0f2142;
+  color: white;
+}
+
 .sect-wrap {
   max-width: 1420px;
   padding: 0 30px;
@@ -50,7 +55,7 @@ address, i, em {
   font-size: 120px;
   color: #efefef;
   font-style: italic;
-  margin: 70px 0 80px;
+  padding: 70px 0 80px;
 }
 
 header {
@@ -65,15 +70,26 @@ header .header_wrap {
   justify-content: space-between;
   align-items: center;
 }
+header .header_wrap .logo a {
+  font-family: "Pacifico", serif;
+  font-size: 55px;
+  background: linear-gradient(90deg, rgb(167, 196, 250) 31%, rgb(215, 152, 216) 71%);
+  color: transparent;
+  -webkit-background-clip: text;
+}
 header .header_wrap .gnb ul {
   display: flex;
 }
 header .header_wrap .gnb ul li {
   padding: 20px 50px;
   position: relative;
+  transition: all 0.3s ease;
 }
 header .header_wrap .gnb ul li.active a {
   color: #92a8d1;
+}
+header .header_wrap .gnb ul li:hover a {
+  color: #d798d8;
 }
 header .header_wrap .gnb ul li.active::after {
   content: "";

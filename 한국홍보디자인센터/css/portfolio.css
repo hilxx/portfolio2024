@@ -1,5 +1,5 @@
 #container .main {
-  margin-bottom: 200px;
+  padding-bottom: 200px;
 }
 #container .main .web_wrap .web_box .web_box-title {
   font-size: 38px;
@@ -38,6 +38,9 @@
 #container .main .web_wrap .web_box .web_cont-wrap .web_cont .web_thumb:hover .com_logo img.logo-white {
   opacity: 0;
 }
+#container .main .web_wrap .web_box .web_cont-wrap .web_cont .web_thumb:hover .com_img {
+  transform: scale(1.2);
+}
 #container .main .web_wrap .web_box .web_cont-wrap .web_cont .web_thumb .black_hover {
   position: absolute;
   top: 0;
@@ -51,6 +54,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: all 0.3s ease;
 }
 #container .main .web_wrap .web_box .web_cont-wrap .web_cont .web_thumb .com_logo img {
   transition: all 0.3s ease;
@@ -78,21 +82,32 @@
 #container .main .web_wrap .web_box .web_cont-wrap .web_cont .web_dscBox h3 {
   font-size: 24px;
   font-weight: 700;
-  color: #000;
+  color: white;
 }
 #container .main .web_wrap .web_box .web_cont-wrap .web_cont .web_dscBox .dsc_detail h5 {
   font-size: 16px;
-  color: #222;
+  font-weight: 550;
+  color: white;
   margin: 5px 0 15px;
 }
 #container .main .web_wrap .web_box .web_cont-wrap .web_cont .web_dscBox .dsc_detail ul li {
   font-size: 16px;
   line-height: 1.5;
   padding-right: 10px;
+  color: #efefef;
 }
 #container .main .web_wrap .web_box .web_cont-wrap .web_cont .web_dscBox .dsc_detail ul li span {
   font-size: 13px;
-  color: #444;
+  color: #ccc;
+}
+#container .main .web_wrap .web_box .web_cont-wrap .web_cont .web_dscBox .dsc_detail ul li.link a {
+  color: #ccc;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  margin-top: 5px;
+}
+#container .main .web_wrap .web_box .web_cont-wrap .web_cont .web_dscBox .dsc_detail ul li.link a:hover {
+  color: white;
 }
 
 @media screen and (max-width: 1280px) {

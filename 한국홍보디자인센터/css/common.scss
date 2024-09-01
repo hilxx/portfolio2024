@@ -41,9 +41,13 @@ address,i,em{
 
 //변수 선언
 $hilxx_color-b:#92a8d1;
-$hilxx_color-p:#d58e8c;
+$hilxx_color-p:#d798d8; //#d58e8c;
 
 //common
+#container{
+    background:#0f2142;
+    color:white;
+}
 .sect-wrap{
     max-width:1420px;
     padding:0 30px;
@@ -56,7 +60,7 @@ $hilxx_color-p:#d58e8c;
     font-size:120px;
     color:#efefef;
     font-style:italic;
-    margin:70px 0 80px;
+    padding:70px 0 80px;
 }
 
 
@@ -75,6 +79,16 @@ header{
         justify-content:space-between;
         align-items:center;
 
+        .logo{
+            a{
+                font-family:"Pacifico", serif;
+                font-size:55px;
+                background: linear-gradient(90deg, rgba(167,196,250,1) 31%, rgba(215,152,216,1) 71%);
+                color: transparent;
+                -webkit-background-clip: text;
+            }
+        }
+
         .gnb{
             ul {
                 display:flex;
@@ -82,10 +96,17 @@ header{
                 li{
                     padding:20px 50px;
                     position:relative;
+                    transition:all 0.3s ease;
 
                     &.active{
+                        a{
+                             color:$hilxx_color-b;
+                         }
+                     }
+
+                    &:hover{
                        a{
-                            color:$hilxx_color-b;
+                            color:$hilxx_color-p;
                         }
                     }
 
